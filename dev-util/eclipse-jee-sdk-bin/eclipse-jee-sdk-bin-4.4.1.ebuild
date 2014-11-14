@@ -27,7 +27,7 @@ RDEPEND="
 	>=virtual/jdk-1.6
 	x11-libs/gtk+:2"
 
-S=${WORKDIR}/eclipse
+S=${WORKDIR}/eclipse-jee
 
 src_install() {
 	local dest=/opt/${PN}-${SLOT}
@@ -42,7 +42,7 @@ src_install() {
 
 	cp "${FILESDIR}"/eclipserc-jee-bin "${T}" || die
 	cp "${FILESDIR}"/eclipse-jee-bin "${T}" || die
-	sed -e "s@%SLOT%@${SLOT}@" -i "${T}"/eclipse{,rc}-bin || die
+	sed -e "s@%SLOT%@${SLOT}@" -i "${T}"/eclipse{,rc}-jee-bin || die
 
 	insinto /etc
 	newins "${T}"/eclipserc-jee-bin eclipserc-jee-bin-${SLOT}
