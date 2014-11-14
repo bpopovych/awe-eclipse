@@ -27,7 +27,7 @@ RDEPEND="
 	>=virtual/jdk-1.6
 	x11-libs/gtk+:2"
 
-S=${WORKDIR}/eclipse-jee
+S=${WORKDIR}/eclipse
 
 src_install() {
 	local dest=/opt/${PN}-${SLOT}
